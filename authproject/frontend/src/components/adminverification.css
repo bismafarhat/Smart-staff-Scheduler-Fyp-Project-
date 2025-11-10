@@ -1,0 +1,633 @@
+/* AdminVerificationPage Professional Styles */
+
+.admin-verification-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.admin-verification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.admin-verification-title {
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.admin-verification-header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-verification-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-verification-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.admin-verification-btn-secondary {
+  background-color: #64748b;
+  color: white;
+}
+
+.admin-verification-btn-secondary:hover {
+  background-color: #475569;
+}
+
+.admin-verification-btn-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.admin-verification-btn-success:hover {
+  background-color: #059669;
+}
+
+.admin-verification-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.admin-verification-btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.admin-verification-btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Alert Messages */
+.admin-verification-error {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #991b1b;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1px solid #f87171;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(248, 113, 113, 0.15);
+}
+
+.admin-verification-error strong {
+  color: #7f1d1d;
+}
+
+.admin-verification-debug {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  color: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Loading State */
+.admin-verification-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.admin-verification-loading-text {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Instructions Section */
+.admin-verification-instructions {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 1px solid #93c5fd;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.1);
+}
+
+.admin-verification-instructions-title {
+  margin: 0 0 16px 0;
+  color: #1e40af;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-verification-instructions ol {
+  margin: 0;
+  padding-left: 24px;
+  line-height: 1.7;
+  color: #1e3a8a;
+}
+
+.admin-verification-instructions li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Card Component */
+.admin-verification-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-verification-card-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-verification-empty-state {
+  padding: 60px 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.admin-verification-empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.admin-verification-empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.admin-verification-empty-subtitle {
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+/* Table Styles */
+.admin-verification-table-container {
+  overflow-x: auto;
+}
+
+.admin-verification-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-verification-table th {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 700;
+  color: #374151;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-verification-table td {
+  border: 1px solid #e2e8f0;
+  padding: 16px 12px;
+  vertical-align: top;
+}
+
+.admin-verification-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.admin-verification-table tbody tr:hover {
+  background-color: #f0f9ff;
+  transition: background-color 0.2s ease;
+}
+
+/* Task Details in Table */
+.admin-verification-task-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.admin-verification-task-category {
+  font-size: 12px;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.admin-verification-task-description {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.admin-verification-staff-name {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.admin-verification-staff-department {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.admin-verification-staff-title {
+  font-size: 11px;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.admin-verification-location {
+  font-weight: 700;
+  color: #374151;
+}
+
+/* Priority Badge */
+.admin-verification-priority-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.admin-verification-priority-urgent {
+  background-color: #dc2626;
+  color: white;
+}
+
+.admin-verification-priority-high {
+  background-color: #ea580c;
+  color: white;
+}
+
+.admin-verification-priority-medium {
+  background-color: #d97706;
+  color: white;
+}
+
+.admin-verification-priority-low {
+  background-color: #16a34a;
+  color: white;
+}
+
+.admin-verification-completed-date {
+  font-size: 12px;
+  color: #64748b;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+/* Modal Styles */
+.admin-verification-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.admin-verification-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 650px;
+  width: 95%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.admin-verification-modal-title {
+  margin-top: 0;
+  color: #1e293b;
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.admin-verification-task-info {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-verification-task-info-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.admin-verification-task-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.admin-verification-task-info-label {
+  font-weight: 700;
+  color: #334155;
+}
+
+/* User Selection */
+.admin-verification-user-selection-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.admin-verification-user-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background-color: #f8fafc;
+}
+
+.admin-verification-user-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-verification-user-item:last-child {
+  border-bottom: none;
+}
+
+.admin-verification-user-item:hover:not(.admin-verification-user-item-disabled) {
+  background-color: #e0f2fe;
+  transform: translateX(4px);
+}
+
+.admin-verification-user-item-selected {
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+}
+
+.admin-verification-user-item-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.admin-verification-user-checkbox {
+  margin-right: 16px;
+  transform: scale(1.2);
+  accent-color: #3b82f6;
+}
+
+.admin-verification-user-info {
+  flex: 1;
+}
+
+.admin-verification-user-name {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.admin-verification-user-department {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 3px;
+}
+
+.admin-verification-user-shift {
+  font-size: 11px;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.admin-verification-user-assignee-badge {
+  margin-left: 12px;
+  font-size: 10px;
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.admin-verification-selection-status {
+  font-size: 14px;
+  margin-top: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.admin-verification-selection-valid {
+  color: #16a34a;
+  background-color: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+.admin-verification-selection-invalid {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+/* Instructions in Modal */
+.admin-verification-modal-instructions {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-verification-modal-instructions strong {
+  color: #92400e;
+}
+
+/* Modal Actions */
+.admin-verification-modal-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Help Section */
+.admin-verification-help {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-verification-help-title {
+  margin-top: 0;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.admin-verification-help-content {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.admin-verification-help-content p {
+  margin-bottom: 16px;
+}
+
+.admin-verification-help-content p:last-child {
+  margin-bottom: 0;
+}
+
+.admin-verification-help-content strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.admin-verification-help-content ul {
+  margin: 12px 0 20px 0;
+  padding-left: 20px;
+}
+
+.admin-verification-help-content li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-verification-container {
+    padding: 16px;
+  }
+
+  .admin-verification-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .admin-verification-title {
+    font-size: 24px;
+  }
+
+  .admin-verification-modal {
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .admin-verification-modal-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-verification-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-verification-card,
+.admin-verification-instructions,
+.admin-verification-help {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom Scrollbar */
+.admin-verification-user-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-verification-user-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.admin-verification-user-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.admin-verification-user-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
